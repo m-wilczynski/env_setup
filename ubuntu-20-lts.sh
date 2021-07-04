@@ -112,7 +112,7 @@ sudo add-apt-repository -y ppa:snwh/ppa
 sudo apt-get -y install paper-icon-theme
 
 # Terminal theme
-wget "https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh" && bash onehalfdark.sh
+cd ~/Downloads/env_setup/ && wget "https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh" && bash onehalfdark.sh
 
 # TODO: Script fonts and GNOME Tweak Tool outpot with gsettings
 
