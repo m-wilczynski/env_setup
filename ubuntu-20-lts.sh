@@ -3,6 +3,10 @@
 # Update OS
 sudo apt-get -y update
 
+# Create base dir for downloading binaries
+mkdir ~/Downloads/env_setup
+cd ~/Downloads/env_setup
+
 ###################################################
 ################## CLI TOOLS ######################
 ###################################################
@@ -100,7 +104,7 @@ sudo apt-get install -y gtk2-engines-murrine
 sudo apt-get install -y sassc
 sudo apt-get install -y unzip
 
-cd ~/Downloads/env_setup && mkdir orchis && wget -O ~/Downloads/env_setup/orchis/master.zip "https://github.com/vinceliuice/Orchis-theme/archive/refs/heads/master.zip" 
+mkdir orchis && wget -O ~/Downloads/env_setup/orchis/master.zip "https://github.com/vinceliuice/Orchis-theme/archive/refs/heads/master.zip" 
 cd orchis && unzip master.zip && cd Orchis-theme-master && bash install.sh
 
 # Paper Icons
