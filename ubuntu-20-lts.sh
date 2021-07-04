@@ -111,6 +111,12 @@ cd orchis && unzip master.zip && cd Orchis-theme-master && bash install.sh
 sudo add-apt-repository -y ppa:snwh/ppa
 sudo apt-get -y install paper-icon-theme
 
+# Terminal theme
+wget "https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh" && bash onehalfdark.sh
+
+# TODO: Script fonts and GNOME Tweak Tool outpot with gsettings
+
+# TODO: Wallpaper? :)
 
 ###################################################
 ################# CLEANUP #########################
