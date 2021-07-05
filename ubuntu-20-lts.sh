@@ -55,7 +55,7 @@ sudo apt install -y golang
 
 # Microsoft SQL Server
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2017.list)"
+sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
 sudo apt-get update
 sudo apt-get install -y mssql-server
 
