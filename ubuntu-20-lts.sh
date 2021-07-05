@@ -53,11 +53,6 @@ source ~/.profile
 # Golang
 sudo apt install -y golang
 
-# Powershell Core
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/20.04/prod.list
-sudo apt-get install -y powershell-preview
-
 # Microsoft SQL Server
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2017.list)"
