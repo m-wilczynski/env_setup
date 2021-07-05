@@ -104,9 +104,9 @@ sudo dpkg -i ~/Downloads/env_setup/gitkraken-amd64.deb
 # Firefox
 sudo apt-get -y install firefox
 
-# Omni DB
-wget -O ~/Downloads/env_setup/omnidb-app_2.9.0-debian-amd64.deb "https://omnidb.org/dist/2.9.0/omnidb-app_2.9.0-debian-amd64.deb"
-sudo dpkg -i ~/Downloads/env_setup/omnidb-app_2.9.0-debian-amd64.deb
+# Azure Data Studo
+wget -O ~/Downloads/env_setup/azuredatastudio.deb "https://go.microsoft.com/fwlink/?linkid=2165738"
+sudo dpkg -i ~/Downloads/env_setup/azuredatastudio.deb
 
 # Spotify
 sudo apt-get -y install snapd
