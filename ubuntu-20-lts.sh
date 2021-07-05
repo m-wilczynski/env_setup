@@ -13,6 +13,11 @@ cd ~/Downloads/env_setup
 
 touch ~/.bashrc
 
+echo "
+###################################################
+#################### CUSTOM #######################
+###################################################" >> ~/.bashrc
+
 # Curl and wget
 sudo apt-get -y install libcurl3
 sudo apt-get -y install curl
@@ -49,7 +54,10 @@ sudo apt-get install -y build-essential
 # npm without sudo
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
+echo "
+#custom npm binaries
+export PATH=~/.npm-global/bin:$PATH
+" >> ~/.bashrc
 source ~/.bashrc
 
 # Golang
