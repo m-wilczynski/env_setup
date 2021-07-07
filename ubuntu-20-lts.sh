@@ -58,7 +58,7 @@ npm config set prefix '~/.npm-global'
 
 echo '
 # custom npm binaries
-export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.npm-global/lib:~/.npm-global/bin:$PATH
 ' >> ~/.bashrc
 
 source ~/.bashrc
