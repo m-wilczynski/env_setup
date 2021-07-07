@@ -56,10 +56,10 @@ sudo apt-get install -y build-essential
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 
-echo "
+echo '
 # custom npm binaries
 export PATH=~/.npm-global/bin:$PATH
-" >> ~/.bashrc
+' >> ~/.bashrc
 
 source ~/.bashrc
 
@@ -159,7 +159,7 @@ cd ~/Downloads/env_setup/ && wget "https://raw.githubusercontent.com/sonph/oneha
 sudo apt install -y python3-pip
 pip3 install --user powerline-status
 
-echo "
+echo '
 # Local bin for pip installs
 export PATH=$PATH:$HOME/.local/bin
  
@@ -170,7 +170,7 @@ if [ -f $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerli
     POWERLINE_BASH_SELECT=1
     source $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
 fi
-" >> ~/.bashrc
+' >> ~/.bashrc
 
 source ~/.bashrc
 
