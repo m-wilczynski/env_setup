@@ -29,8 +29,8 @@ read -p "Git user name: " gitUserName
 read -p "Git user email: " gitEmail
 
 sudo apt-get -y install git
-git config --global user.email "$gitUserName"
-git config --global user.name "$gitEmail"
+git config --global user.email "$gitEmail"
+git config --global user.name "$gitUserName"
 
 # OpenSSL
 sudo apt-get -y install openssl
