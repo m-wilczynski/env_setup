@@ -107,6 +107,22 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube start
 minikube kubectl -- get po -A
 
+# autocomplete for kubectl with alias
+
+mkdir ~/.bash_completion.d
+curl https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias \
+     > ~/.bash_completion.d/complete_alias
+
+echo "
+# Autocomplete for aliases
+source ~/.bash_completion.d/complete_alias" >> ~/.bashrc
+
+echo '
+# minikube kubectl alias "k" autocomplete
+source <(minikube completion bash)
+alias k="minikube kubectl --"
+complete -F _complete_alias k' >> ~/.bashrc
+
 ###################################################
 ################## GUI TOOLS ######################
 ###################################################
