@@ -101,6 +101,12 @@ sudo usermod -a -G docker "$USER"
 # jq is useful for inspecting Docker containers' JSON
 sudo apt-get -y jq
 
+# minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start
+minikube kubectl -- get po -A
+
 ###################################################
 ################## GUI TOOLS ######################
 ###################################################
