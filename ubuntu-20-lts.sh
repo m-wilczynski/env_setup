@@ -18,11 +18,12 @@ echo "
 #################### CUSTOM #######################
 ###################################################" >> ~/.bashrc
 
-# Curl and wget
+# Basics to get started
 sudo apt-get -y install libcurl3
 sudo apt-get -y install curl
 sudo apt-get -y install wget
 sudo apt-get -y install vim
+sudo apt-get -y install traceroute
 
 # Git
 read -p "Git user name: " gitUserName
