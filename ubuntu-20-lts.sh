@@ -105,6 +105,10 @@ sudo apt-get -y jq
 # minikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# with low resources minikube tends to behave unpredictably
+minikube delete
+minikube config set memory 8192
+minikube config set cpus 4
 minikube start
 minikube kubectl -- get po -A
 
