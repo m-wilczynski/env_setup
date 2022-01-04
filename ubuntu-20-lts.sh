@@ -67,15 +67,6 @@ source ~/.bashrc
 # Golang
 sudo apt install -y golang
 
-# Microsoft SQL Server
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
-sudo apt-get update
-sudo apt-get install -y mssql-server
-
-# PostgreSQL
-sudo apt install -y postgresql postgresql-contrib
-
 # Docker runtime
 sudo apt-get install -y \
     apt-transport-https \
@@ -100,7 +91,7 @@ sudo apt-get install -y \
 sudo usermod -a -G docker "$USER"
 
 # jq is useful for inspecting Docker containers' JSON
-sudo apt-get -y jq
+sudo apt-get install -y jq
 
 # minikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -137,22 +128,11 @@ wget -O ~/Downloads/env_setup/vscode-amd64.deb "https://code.visualstudio.com/sh
 sudo dpkg -i ~/Downloads/env_setup/vscode-amd64.deb
 
 # Git Kraken
-sudo apt-get -y install gconf2
-wget -O ~/Downloads/env_setup/gitkraken-amd64.deb "https://release.gitkraken.com/linux/gitkraken-amd64.deb"
-sudo dpkg -i ~/Downloads/env_setup/gitkraken-amd64.deb
-
-# Firefox
-sudo apt-get -y install firefox
+sudo apt-get install -y git-cola
 
 # Azure Data Studo
 wget -O ~/Downloads/env_setup/azuredatastudio.deb "https://go.microsoft.com/fwlink/?linkid=2165738"
 sudo dpkg -i ~/Downloads/env_setup/azuredatastudio.deb
-
-# Spotify
-sudo apt-get -y install snapd
-sudo snap install spotify
-
-
 
 ###################################################
 ################# CUSTOM THEME ####################
