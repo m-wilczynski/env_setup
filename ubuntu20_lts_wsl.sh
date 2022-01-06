@@ -1,6 +1,9 @@
 # TODO
 
 sudo apt-get update
+
+source ./ubuntu20_lts_cli.sh
+
 # TODO: fresh golang from tarball, add it to ~/.profile and add $GOPATH do ~/.bashrc
 # Source both files from above
 sudo apt-get install --reinstall ca-certificates
