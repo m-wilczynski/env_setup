@@ -119,3 +119,9 @@ echo '
 source <(minikube completion bash)
 alias k="minikube kubectl --"
 complete -F _complete_alias k' >> ~/.bashrc
+
+###################################################
+################# CLEANUP #########################
+###################################################
+rm -rf ~/Downloads/env_setup
+
