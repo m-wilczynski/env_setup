@@ -1,4 +1,10 @@
 # TODO
+
+sudo apt-get update
+# TODO: fresh golang from tarball, add it to ~/.profile and add $GOPATH do ~/.bashrc
+# Source both files from above
+sudo apt-get install --reinstall ca-certificates
+
 # Append below to ~/.bashrc
 
 GOPATH=$HOME/go
