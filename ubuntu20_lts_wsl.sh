@@ -4,14 +4,28 @@ sudo apt-get update
 
 source ./ubuntu20_lts_cli.sh
 
-# TODO: fresh golang from tarball, add it to ~/.profile and add $GOPATH do ~/.bashrc
-# Source both files from above
+# Fresh Golang from tarball
+curl -OL https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
+
+# Add golang to PATH
+echo '
+export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+
 sudo apt-get install --reinstall ca-certificates
 
-# Append below to ~/.bashrc
+# Set GOPATH for golang packages installation
+echo '
+GOPATH=$HOME/go' >> ~/.bashrc
 
-GOPATH=$HOME/go
+# Source both files from above for immediate effeect
+source ~/.profile && source ~/.bashrc
 
+# Powerline for WSL via powerline-go
+go install github.com/justjanne/powerline-go@latest
+
+# Enable powerline-go in bash
+echo'
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l)\
             -colorize-hostname\
@@ -30,4 +44,6 @@ function _update_ps1() {
 
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+fi' >> ~/.bashrc
+
+source ~./bashrc
