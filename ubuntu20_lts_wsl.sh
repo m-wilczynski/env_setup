@@ -1,5 +1,3 @@
-# TODO
-
 sudo apt-get update
 
 source ./ubuntu20_lts_cli.sh
@@ -25,7 +23,7 @@ source ~/.profile && source ~/.bashrc
 go install github.com/justjanne/powerline-go@latest
 
 # Enable powerline-go in bash
-echo'
+echo '
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l)\
             -colorize-hostname\
@@ -45,5 +43,9 @@ function _update_ps1() {
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi' >> ~/.bashrc
+
+# More readable dirs in Ubuntu @ WSL
+echo '
+LS_COLORS="ow=01;36;40" && export LS_COLORS' >> ~/.bashrc
 
 source ~./bashrc
