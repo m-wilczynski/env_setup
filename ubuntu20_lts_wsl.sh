@@ -4,7 +4,7 @@ source ./ubuntu20_lts_cli.sh
 
 # Fresh Golang from tarball
 curl -OL https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
 
 # Add golang to PATH
 echo '
@@ -20,7 +20,7 @@ GOPATH=$HOME/go' >> ~/.bashrc
 source ~/.profile && source ~/.bashrc
 
 # Powerline for WSL via powerline-go
-go install github.com/justjanne/powerline-go@latest
+go get github.com/justjanne/powerline-go
 
 # Enable powerline-go in bash
 echo '
@@ -48,4 +48,4 @@ fi' >> ~/.bashrc
 echo '
 LS_COLORS="ow=01;36;40" && export LS_COLORS' >> ~/.bashrc
 
-source ~./bashrc
+source ~/.bashrc
