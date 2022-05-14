@@ -4,13 +4,18 @@
 
 ## WSL with Ubuntu setup
 
-**0. *(Powershell)* Optional - copy Windows Terminal setup**
+**1. *(WSL)* Clone the repo (obviously):**
+```bash
+git clone https://github.com/m-wilczynski/env_setup.git
+```
+
+**1.1. *(Powershell)* Optional - copy Windows Terminal setup**
 > If skipped you need to edit your settings.json manually with font you'll choose in step 1
 ```powershell
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/m-wilczynski/env_setup/main/win-term_settings.json -UseBasicParsing -OutFile $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 ```
 
-**1. *(Powershell)* Get font with Powerline glyphs; my choice is `Source Code Pro`:**
+**2. *(Powershell)* Get font with Powerline glyphs; my choice is `Source Code Pro`:**
 ```powershell
 cd $env:USERPROFILE
 mkdir tmp_fonts
@@ -21,11 +26,6 @@ Invoke-WebRequest -Uri $fontFileUrl -UseBasicParsing -OutFile "Source Code Pro f
 ```
 Click "Install" afterwards when font preview window pops up.
 If you want to go full automate, find `Add-Font.ps1` script that Microsoft published.
-
-**2. *(WSL)* Clone repo:**
-```bash
-git clone https://github.com/m-wilczynski/env_setup.git
-```
 
 **3. *(WSL)* Go to cloned repo, run `ubuntu20_lts_wsl.sh` and source it to have immediate effect:**
 ```bash
