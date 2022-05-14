@@ -69,15 +69,14 @@
     "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
     "profiles": 
     {
-        "defaults": 
+       "defaults": 
         {
             "acrylicOpacity": 0.80000000000000004,
             "colorScheme": "Monokai Night",
             "cursorHeight": 25,
             "cursorShape": "vintage",
-            "fontFace": "Cascadia Code PL",
+            "fontFace": "Source Code Pro for Powerline",
             "fontSize": 10,
-            "startingDirectory": "$HOME",
             "useAcrylic": true
         },
         "list": 
@@ -85,13 +84,13 @@
             {
                 "antialiasingMode": "cleartype",
                 "colorScheme": "One Half Dark",
-                "commandline": "wsl -d Ubuntu",
+                //It might look stupid but it works, ie. does not force me to run "clear" myself when Ubuntu prompt starts to fix Powerline font artifacts
+                "commandline": "powershell.exe \"clear; wsl ~\"",
                 "fontFace": "Source Code Pro for Powerline",
                 "fontSize": 11,
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
                 "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl",
                 "startingDirectory": null
             },
             {
