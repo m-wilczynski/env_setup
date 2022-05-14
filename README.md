@@ -33,7 +33,11 @@ cd env_setup
 bash ./ubuntu20_lts_wsl.sh && source ~/.bashrc
 ```
 
-**4. *(WSL)* Verify setup:**
+**4. *(WSL)* Open new terminal window of WSL; result should be:**
+![image](https://user-images.githubusercontent.com/6330789/168451434-65a3d3d0-8cb3-491e-b83d-094f2a9cc65d.png)
+
+
+**5. *(WSL)* Verify setup:**
 ```bash
 # Git
 git version
