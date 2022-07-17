@@ -90,4 +90,4 @@ sh ./win_gitbash.sh
 then restart entire Windows Terminal (required since refreshing PATH sourced from Windows environment is tricky).
 
 **4. *(Git Bash)* Result:**
-![Git Bash](./git-bash.png)
+![Git Bash](./git-bash.PNG)
