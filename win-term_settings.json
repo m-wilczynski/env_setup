@@ -1,7 +1,12 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
         {
             "command": 
             {
@@ -11,12 +16,16 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": 
+            {
+                "action": "newTab",
+                "index": 1
+            },
+            "keys": "alt+shift+2"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -47,20 +56,15 @@
             "command": 
             {
                 "action": "newTab",
-                "index": 1
-            },
-            "keys": "alt+shift+2"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab",
                 "index": 3
             },
             "keys": "alt+shift+4"
         },
         {
-            "command": "closeTab",
+            "command": 
+            {
+                "action": "closeTab"
+            },
             "keys": "alt+w"
         }
     ],
@@ -69,14 +73,17 @@
     "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
     "profiles": 
     {
-       "defaults": 
+        "defaults": 
         {
-            "acrylicOpacity": 0.80000000000000004,
             "colorScheme": "Monokai Night",
             "cursorHeight": 25,
             "cursorShape": "vintage",
-            "fontFace": "Source Code Pro for Powerline",
-            "fontSize": 10,
+            "font": 
+            {
+                "face": "Source Code Pro for Powerline",
+                "size": 10
+            },
+            "opacity": 80,
             "useAcrylic": true
         },
         "list": 
@@ -84,25 +91,38 @@
             {
                 "antialiasingMode": "cleartype",
                 "colorScheme": "One Half Dark",
-                //It might look stupid but it works, ie. does not force me to run "clear" myself when Ubuntu prompt starts to fix Powerline font artifacts
                 "commandline": "powershell.exe \"clear; wsl ~\"",
-                "fontFace": "Source Code Pro for Powerline",
-                "fontSize": 11,
+                "font": 
+                {
+                    "face": "Source Code Pro for Powerline",
+                    "size": 11
+                },
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
+                "icon": "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
                 "name": "Ubuntu",
                 "startingDirectory": null
             },
             {
+                "font": 
+                {
+                    "face": "MesloLGM NF",
+                    "size": 11
+                },
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "icon": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+                "name": "bash (git)",
+                "source": "Git"
+            },
+            {
                 "colorScheme": "Campbell Powershell",
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
                 "startingDirectory": null
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "cmd",
@@ -116,13 +136,8 @@
                 "startingDirectory": null
             },
             {
+                "guid": "{6a2d5355-0bf8-516f-a2be-2513337e2ba1}",
                 "name": "Profile 5"
-            },
-            {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": false,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -380,6 +395,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#000000",

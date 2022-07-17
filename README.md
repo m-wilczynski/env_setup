@@ -2,14 +2,14 @@
 🏗 Development environment setup
 
 
-## WSL with Ubuntu setup
+## WSL (Powerline) with Ubuntu setup
 
-**1. *(WSL)* Clone the repo (obviously):**
+**1. *(any)* Clone the repo (obviously):**
 ```bash
 git clone https://github.com/m-wilczynski/env_setup.git
 ```
 
-**1.1. *(Powershell)* Optional - copy Windows Terminal setup**
+**1.1. *(Powershell as Administrator)* Optional - copy Windows Terminal setup**
 > If skipped you need to edit your settings.json manually with font you'll choose in step 1
 ```powershell
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/m-wilczynski/env_setup/main/win-term_settings.json -UseBasicParsing -OutFile $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
@@ -34,7 +34,7 @@ bash ./ubuntu20_lts_wsl.sh && source ~/.bashrc
 ```
 
 **4. *(WSL)* Open new terminal window of WSL; result should be:**
-![image](https://user-images.githubusercontent.com/6330789/168451434-65a3d3d0-8cb3-491e-b83d-094f2a9cc65d.png)
+![WSL Powerline](./wsl-powerline.PNG)
 
 
 **5. *(WSL)* Verify setup:**
@@ -56,3 +56,38 @@ docker version
 # kubectl (with alias = "k", running minikube)
 k version
 ```
+
+
+## Git Bash with `oh-my-posh`
+
+**1. *(any)* Clone the repo (obviously):**
+```bash
+git clone https://github.com/m-wilczynski/env_setup.git
+```
+
+**1.1. *(Powershell as Administrator)* Optional - copy Windows Terminal setup**
+> If skipped you need to edit your settings.json manually with font you'll choose in step 1
+```powershell
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/m-wilczynski/env_setup/main/win-term_settings.json -UseBasicParsing -OutFile $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+```
+
+**2. *(Powershell as Administrator)* Download font to be used with `oh-my-posh`:**
+```powershell
+cd $env:USERPROFILE
+mkdir -Force tmp_fonts
+cd tmp_fonts
+$fontFileUrl="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf?raw=true"
+Invoke-WebRequest -Uri $fontFileUrl -UseBasicParsing -OutFile "Meslo Mono NF.ttf"
+& '.\Meslo Mono NF.ttf'
+```
+Click "Install" in newly opened window and close both this window and Powershell prompt.
+
+**3. *(Git Bash)* Run `win_gitbash.sh` script inside Git Bash:**
+```bash
+cd env_setup
+sh ./win_gitbash.sh
+```
+then restart entire Windows Terminal (required since refreshing PATH sourced from Windows environment is tricky).
+
+**4. *(Git Bash)* Result:**
+![Git Bash](./git-bash.png)
