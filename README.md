@@ -76,7 +76,7 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/m-wilczynski/env_setup/
 cd $env:USERPROFILE
 mkdir -Force tmp_fonts
 cd tmp_fonts
-$fontFileUrl="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf?raw=true"
+$fontFileUrl="https://github.com/ryanoasis/nerd-fonts/blob/2.1.0/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf?raw=true"
 Invoke-WebRequest -Uri $fontFileUrl -UseBasicParsing -OutFile "Meslo Mono NF.ttf"
 & '.\Meslo Mono NF.ttf'
 ```
