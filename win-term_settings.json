@@ -4,18 +4,6 @@
     "actions": 
     [
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
             "command": 
             {
                 "action": "newTab",
@@ -24,25 +12,8 @@
             "keys": "alt+shift+2"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab",
-                "index": 0
-            },
-            "keys": "alt+shift+1"
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -55,10 +26,31 @@
         {
             "command": 
             {
-                "action": "newTab",
-                "index": 3
+                "action": "copy",
+                "singleLine": false
             },
-            "keys": "alt+shift+4"
+            "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "alt+shift+1"
         },
         {
             "command": 
@@ -66,11 +58,25 @@
                 "action": "closeTab"
             },
             "keys": "alt+w"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 3
+            },
+            "keys": "alt+shift+4"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+    "defaultProfile": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -81,7 +87,7 @@
             "font": 
             {
                 "face": "Source Code Pro for Powerline",
-                "size": 10
+                "size": 10.0
             },
             "opacity": 80,
             "useAcrylic": true
@@ -89,31 +95,31 @@
         "list": 
         [
             {
-                "antialiasingMode": "cleartype",
-                "colorScheme": "One Half Dark",
-                "commandline": "powershell.exe \"clear; wsl ~\"",
-                "font": 
-                {
-                    "face": "Source Code Pro for Powerline",
-                    "size": 11
-                },
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "icon": "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
-                "name": "Ubuntu",
-                "startingDirectory": null
-            },
-            {
                 "font": 
                 {
                     "face": "MesloLGM NF",
-                    "size": 11
+                    "size": 11.0
                 },
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "icon": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
                 "name": "bash (git)",
                 "source": "Git"
+            },
+            {
+                "antialiasingMode": "cleartype",
+                "colorScheme": "One Half Dark",
+                "commandline": "powershell.exe \"clear; wsl ~\"",
+                "font": 
+                {
+                    "face": "Source Code Pro for Powerline",
+                    "size": 11.0
+                },
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "icon": "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png",
+                "name": "Ubuntu",
+                "startingDirectory": null
             },
             {
                 "colorScheme": "Campbell Powershell",
@@ -138,6 +144,24 @@
             {
                 "guid": "{6a2d5355-0bf8-516f-a2be-2513337e2ba1}",
                 "name": "Profile 5"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{c45a11d2-a3ac-58f9-a63b-70e638f46833}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{cff555de-480c-5a6b-bf33-0b50ddc19d4a}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -420,6 +444,29 @@
             "yellow": "#A2734C"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -443,5 +490,6 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "dark"
+    "theme": "dark",
+    "themes": []
 }
